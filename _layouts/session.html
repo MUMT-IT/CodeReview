@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<article class="session">
+  <a class="back" href="{{ '/' | relative_url }}">← All sessions</a>
+  <p class="eyebrow"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%B %-d, %Y' }}</time>{% if page.repository %} · {{ page.repository | escape }}{% endif %}</p>
+  <h1>{{ page.title | escape }}</h1>
+  <p class="intro">{{ page.summary | escape }}</p>
+  <div class="tags">{% for topic in page.topics %}<a class="tag" href="{{ '/' | relative_url }}?topic={{ topic | url_encode }}">{{ topic | escape }}</a>{% endfor %}</div>
+  <div class="prose">{{ content }}</div>
+</article>

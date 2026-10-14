@@ -1,0 +1,21 @@
+title: Code Review Journal
+description: Notes, findings, and decisions from code review sessions.
+url: https://mumt-it.github.io
+baseurl: /CodeReview
+timezone: Asia/Bangkok
+future: true
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  syntax_highlighter: rouge
+collections:
+  sessions:
+    output: true
+    permalink: /sessions/:name/
+defaults:
+  - scope:
+      path: ""
+      type: sessions
+    values:
+      layout: session
+exclude: [README.md, Gemfile, Gemfile.lock, templates, vendor]

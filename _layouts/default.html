@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title | escape }} · {% endif %}{{ site.title | escape }}</title>
+  <meta name="description" content="{{ page.summary | default: site.description | escape }}">
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/syntax.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="{{ '/' | relative_url }}"><span class="mark">&lt;/&gt;</span> Code Review Journal</a><a href="https://github.com/MUMT-IT/CodeReview">Repository ↗</a></header>
+  <main>{{ content }}</main>
+  <footer>Code, context, and lessons worth keeping.</footer>
+</body>
+</html>

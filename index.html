@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<section class="hero"><p class="eyebrow">THE REVIEW ARCHIVE</p><h1>Every review.<br>A little more clarity.</h1><p class="intro">A growing record of code review sessions, findings, and decisions. Find the context you need by date or topic.</p></section>
+<section aria-label="Search sessions" class="archive" data-index="{{ '/sessions.json' | relative_url }}">
+  <form id="filters" class="filters" role="search">
+    <label class="search">Search notes<input type="search" id="query" placeholder="Title, project, finding, or keyword…"></label>
+    <label>Topic<select id="topic"><option value="">All topics</option></select></label>
+    <label>From<input type="date" id="from"></label>
+    <label>To<input type="date" id="to"></label>
+    <button type="reset">Clear filters</button>
+  </form>
+  <div class="results-heading"><h2>Sessions</h2><p id="count" role="status" aria-live="polite">Loading archive…</p></div>
+  <div id="results"></div>
+  <noscript><p>Enable JavaScript to search. Browse all sessions below:</p>{% assign sorted = site.sessions | sort: 'date' | reverse %}{% for session in sorted %}<p><a href="{{ session.url | relative_url }}">{{ session.title | escape }}</a> — {{ session.date | date: '%Y-%m-%d' }}</p>{% endfor %}</noscript>
+</section>
+<script src="{{ '/assets/search.js' | relative_url }}" defer></script>

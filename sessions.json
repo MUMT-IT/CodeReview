@@ -1,0 +1,12 @@
+---
+layout: null
+---
+[{% assign sorted = site.sessions | sort: 'date' | reverse %}{% for session in sorted %}{
+"title": {{ session.title | jsonify }},
+"date": {{ session.date | date: '%Y-%m-%d' | jsonify }},
+"repository": {{ session.repository | default: '' | jsonify }},
+"summary": {{ session.summary | default: '' | jsonify }},
+"topics": {{ session.topics | jsonify }},
+"content": {{ session.content | strip_html | jsonify }},
+"url": {{ session.url | relative_url | jsonify }}
+}{% unless forloop.last %},{% endunless %}{% endfor %}]

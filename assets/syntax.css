@@ -1,0 +1,36 @@
+/* Rouge token colors for fenced code blocks, including Python. */
+.prose .highlight pre {
+  background: #f0f3f5;
+  color: #24292f;
+  border: 1px solid #d9dfe5;
+  line-height: 1.65;
+  tab-size: 4;
+}
+.highlight .c, .highlight .c1, .highlight .cm,
+.highlight .cp, .highlight .cs, .highlight .ch {
+  color: #57606a;
+  font-style: italic;
+}
+.highlight .k, .highlight .kc, .highlight .kd,
+.highlight .kn, .highlight .kp, .highlight .kr,
+.highlight .kt, .highlight .ow {
+  color: #a62645;
+  font-weight: 600;
+}
+.highlight .s, .highlight .s1, .highlight .s2,
+.highlight .sa, .highlight .sb, .highlight .sc,
+.highlight .sd, .highlight .se, .highlight .sh,
+.highlight .si, .highlight .sr, .highlight .ss, .highlight .sx {
+  color: #116329;
+}
+.highlight .m, .highlight .mb, .highlight .mf,
+.highlight .mh, .highlight .mi, .highlight .mo,
+.highlight .il, .highlight .nb, .highlight .bp {
+  color: #0550ae;
+}
+.highlight .nf, .highlight .fm, .highlight .nc,
+.highlight .nd, .highlight .ne {
+  color: #6639ba;
+}
+.highlight .o { color: #a62645; }
+.highlight .err { color: #a62645; background: #ffebe9; }
